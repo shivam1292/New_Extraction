@@ -18,7 +18,7 @@ from gtts import gTTS
 import os
 import json
 from collections import Counter
-from IPython.display import Audio
+import streamlit as st
 
 # Step 1: Fetch News from Yahoo
 def get_yahoo_news(company, max_articles=10):
@@ -111,4 +111,4 @@ print(json.dumps(final_output, indent=4, ensure_ascii=False))
 
 # Play Hindi Speech
 print("\n🎙 Playing Hindi Speech...")
-Audio(speech_file, autoplay=True)
+st.audio(speech_file, autoplay=True)
